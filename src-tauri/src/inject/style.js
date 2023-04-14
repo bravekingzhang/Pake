@@ -302,12 +302,12 @@ window.addEventListener("load", (_event) => {
   imageWrapper.innerHTML = "";
 
   imageWrapper.style.cssText =
-    "display:flex;align-items:center;flex-direction:column;justify-content:space-evenly;";
+    "display:flex;align-items:center;flex-direction:column;justify-content:space-evenly;height:100%;";
   // 创建一个div
   const div = document.createElement("div");
   div.innerHTML =
     "永久免费提供学习和测试，支持上下文，支持保存会话，切勿用于非法用途！否则一切后果自负！！\n" +
-    "近期访问量陡增，这样下去我们很快将无法维持运营。只要每个人出份钱，我们的服务就能维持。";
+    "近期访问量陡增，这样下去我们很快将无法维持运营。<strong> 只要每个人出份钱，我们的服务就能维持</strong>。开启搜索框是联网搜索，类似bing搜索，但响应速度略慢。";
   // 创建一个图片
   imageWrapper.appendChild(div);
 
