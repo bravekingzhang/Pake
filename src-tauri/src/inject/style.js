@@ -329,6 +329,14 @@ window.addEventListener("load", (_event) => {
   const footer = document.getElementsByTagName("footer");
   // 隐藏 footer
   footer[0].style.display = "none";
+
+  setTimeout(() => {
+    hack();
+    // 找到 footer 标签
+    const footer = document.getElementsByTagName("footer");
+    // 隐藏 footer
+    footer[0].style.display = "none";
+  }, 1000);
 });
 
 addEventListener("hashchange", (event) => {
