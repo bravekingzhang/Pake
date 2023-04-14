@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', (_event) => {
+window.addEventListener("DOMContentLoaded", (_event) => {
   const css = `
     #page #footer-wrapper,
     .drawing-board .toolbar .toolbar-action,
@@ -290,7 +290,39 @@ window.addEventListener('DOMContentLoaded', (_event) => {
       z-index: 90000;
     }
   `;
-  const styleElement = document.createElement('style');
+  const styleElement = document.createElement("style");
   styleElement.innerHTML = css;
   document.head.appendChild(styleElement);
+});
+
+window.addEventListener("load", (_event) => {
+  // 找到 img 替换图片 #image-wrapper > div > div > div:nth-child(5) > img
+  const imageWrapper = document.getElementById("image-wrapper");
+  // 删除imageWrapper里的元素
+  imageWrapper.innerHTML = "";
+
+  imageWrapper.style.cssText =
+    "display:flex;align-items:center;flex-direction:column;justify-content:space-evenly;";
+  // 创建一个div
+  const div = document.createElement("div");
+  div.innerHTML =
+    "永久免费提供学习和测试，支持上下文，支持保存会话，切勿用于非法用途！否则一切后果自负！！\n" +
+    "近期访问量陡增，这样下去我们很快将无法维持运营。只要每个人出份钱，我们的服务就能维持。";
+  // 创建一个图片
+  imageWrapper.appendChild(div);
+
+  const img = document.createElement("img");
+
+  //给img 添加样式
+  img.style.cssText = "width: 300px;margin-top: 50px;";
+
+  // 给img 添加src
+  img.src =
+    "https://github.com/bravekingzhang/utools-code2flow-official/raw/main/shoukuanma.png";
+  imageWrapper.appendChild(img);
+
+  // 找到 footer 标签
+  const footer = document.getElementsByTagName("footer");
+  // 隐藏 footer
+  footer[0].style.display = "none";
 });

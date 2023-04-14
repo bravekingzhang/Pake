@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   // Create a modal
   const modalHtml = `
   <div id="pakeUrlModal" class="pake-modal">
@@ -77,18 +77,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   `;
 
-  const modalDiv = document.createElement('div');
+  const modalDiv = document.createElement("div");
   modalDiv.innerHTML = modalHtml;
   document.body.appendChild(modalDiv);
 
-  const modalStyleElement = document.createElement('style');
+  const modalStyleElement = document.createElement("style");
   modalStyleElement.innerText = modalStyle;
   document.head.appendChild(modalStyleElement);
 
-  const urlModal = document.getElementById('pakeUrlModal');
-  const urlInput = document.getElementById('pakeUrlInput');
-  const urlSubmit = document.getElementById('pakeUrlSubmit');
-  const urlClose = document.getElementById('pakeUrlClose');
+  const urlModal = document.getElementById("pakeUrlModal");
+  const urlInput = document.getElementById("pakeUrlInput");
+  const urlSubmit = document.getElementById("pakeUrlSubmit");
+  const urlClose = document.getElementById("pakeUrlClose");
 
   urlSubmit.onclick = function () {
     const url = urlInput.value;
@@ -98,11 +98,11 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   urlClose.onclick = function () {
-    urlModal.style.display = 'none';
+    urlModal.style.display = "none";
   };
 
-  urlInput.addEventListener('keydown', function (event) {
-    if (event.key === 'Enter') {
+  urlInput.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
       const url = urlInput.value;
       if (url) {
         window.location.href = url;
@@ -110,29 +110,29 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape' && urlModal.style.display === 'block') {
-      urlModal.style.display = 'none';
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && urlModal.style.display === "block") {
+      urlModal.style.display = "none";
     }
   });
 
   window.showUrlModal = function () {
-    urlModal.style.display = 'block';
+    urlModal.style.display = "block";
     urlInput.focus();
   };
 
   // Toast
   function pakeToast(msg) {
-    const m = document.createElement('div');
+    const m = document.createElement("div");
     m.innerHTML = msg;
     m.style.cssText =
-      'max-width:60%;min-width: 80px;padding:0 12px;height: 32px;color: rgb(255, 255, 255);line-height: 32px;text-align: center;border-radius: 8px;position: fixed; bottom:24px;right: 28px;z-index: 999999;background: rgba(0, 0, 0,.8);font-size: 13px;';
+      "max-width:60%;min-width: 80px;padding:0 12px;height: 32px;color: rgb(255, 255, 255);line-height: 32px;text-align: center;border-radius: 8px;position: fixed; bottom:24px;right: 28px;z-index: 999999;background: rgba(0, 0, 0,.8);font-size: 13px;";
     document.body.appendChild(m);
     setTimeout(function () {
       const d = 0.5;
       m.style.transition =
-        'transform ' + d + 's ease-in, opacity ' + d + 's ease-in';
-      m.style.opacity = '0';
+        "transform " + d + "s ease-in, opacity " + d + "s ease-in";
+      m.style.opacity = "0";
       setTimeout(function () {
         document.body.removeChild(m);
       }, d * 1000);
