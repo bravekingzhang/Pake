@@ -289,14 +289,16 @@ window.addEventListener("DOMContentLoaded", (_event) => {
       -webkit-user-select: none;
       z-index: 90000;
     }
+    #image-wrapper > div[class="flex items-center flex-col justify-center mt-4 text-center"]{
+      display: none;
+    }
   `;
   const styleElement = document.createElement("style");
   styleElement.innerHTML = css;
   document.head.appendChild(styleElement);
 });
 
-window.addEventListener("load", (_event) => {
-  // 找到 img 替换图片 #image-wrapper > div > div > div:nth-child(5) > img
+function hack() {
   const imageWrapper = document.getElementById("image-wrapper");
   // 删除imageWrapper里的元素
   imageWrapper.innerHTML = "";
@@ -320,6 +322,19 @@ window.addEventListener("load", (_event) => {
   img.src =
     "https://github.com/bravekingzhang/utools-code2flow-official/raw/main/shoukuanma.png";
   imageWrapper.appendChild(img);
+}
+window.addEventListener("load", (_event) => {
+  hack();
+  // 找到 footer 标签
+  const footer = document.getElementsByTagName("footer");
+  // 隐藏 footer
+  footer[0].style.display = "none";
+});
+
+addEventListener("hashchange", (event) => {
+  setTimeout(() => {
+    hack();
+  }, 1000);
 
   // 找到 footer 标签
   const footer = document.getElementsByTagName("footer");
