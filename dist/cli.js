@@ -2091,11 +2091,17 @@ var tauri$3 = {
 		active: false
 	},
 	systemTray: {
-		iconPath: "png/weread_512.png",
+		iconPath: "png/chatgpt_512.png",
 		iconAsTemplate: true
 	},
 	allowlist: {
-		all: true
+		all: true,
+		http: {
+			scope: [
+				"http://**",
+				"https://**"
+			]
+		}
 	}
 };
 var build = {
@@ -2107,7 +2113,7 @@ var build = {
 };
 var CommonConf = {
 	"package": {
-	productName: "WeRead",
+	productName: "hzChatGpt",
 	version: "1.0.0"
 },
 	tauri: tauri$3,
@@ -2117,7 +2123,7 @@ var CommonConf = {
 var windows = [
 	{
 		url: "https://weread.qq.com/",
-		transparent: true,
+		transparent: false,
 		fullscreen: false,
 		width: 1200,
 		height: 780,
@@ -2150,10 +2156,10 @@ var pakeConf = {
 var tauri$2 = {
 	bundle: {
 		icon: [
-			"png/weread_256.ico",
-			"png/weread_32.ico"
+			"png/chatgpt_256.ico",
+			"png/chatgpt_32.ico"
 		],
-		identifier: "com.tw93.weread",
+		identifier: "com.brzhang.chatgpt",
 		active: true,
 		category: "DeveloperTool",
 		copyright: "",
@@ -2161,7 +2167,7 @@ var tauri$2 = {
 		],
 		longDescription: "",
 		resources: [
-			"png/weread_32.ico"
+			"png/chatgpt_32.ico"
 		],
 		shortDescription: "",
 		targets: [
@@ -2187,9 +2193,9 @@ var WinConf = {
 var tauri$1 = {
 	bundle: {
 		icon: [
-			"icons/weread.icns"
+			"icons/chatgpt.icns"
 		],
-		identifier: "com.tw93.weread1",
+		identifier: "com.brzhang.chatgpt",
 		active: true,
 		category: "DeveloperTool",
 		copyright: "",
@@ -2219,9 +2225,9 @@ var MacConf = {
 var tauri = {
 	bundle: {
 		icon: [
-			"png/weread_512.png"
+			"png/chatgpt_512.png"
 		],
-		identifier: "com.tw93.weread",
+		identifier: "com.brzhang.chatgpt",
 		active: true,
 		category: "DeveloperTool",
 		copyright: "",
