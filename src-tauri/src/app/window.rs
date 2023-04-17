@@ -20,7 +20,7 @@ pub fn get_window(app: &mut App, config: PakeConfig, _data_dir: PathBuf) -> Wind
     };
 
     let mut window_builder = WindowBuilder::new(app, "pake", url)
-        .title("")
+        .title("hz-builder")
         .user_agent(user_agent)
         .visible(false) // Prevent initial shaking
         .resizable(window_config.resizable)

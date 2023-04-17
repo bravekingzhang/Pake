@@ -117,8 +117,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   window.showUrlModal = function () {
-    urlModal.style.display = "block";
-    urlInput.focus();
+    // urlModal.style.display = "block";
+    // urlInput.focus();
+    window.location.href =
+      "https://blog.brzhang.club/2023/04/17/%E7%B2%BE%E7%BE%8E%E6%A1%8C%E9%9D%A2%E7%AB%AFApp%E6%8E%A8%E8%8D%90/";
   };
 
   // Toast

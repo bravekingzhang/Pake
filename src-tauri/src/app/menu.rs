@@ -10,7 +10,7 @@ use tauri_plugin_window_state::{AppHandleExt, StateFlags};
 
 pub fn get_menu() -> Menu {
     let close = CustomMenuItem::new("close".to_string(), "Close Window").accelerator("CmdOrCtrl+W");
-    let goto_url_item = CustomMenuItem::new("goto_url".to_string(), "Go to URL...")
+    let goto_url_item = CustomMenuItem::new("goto_url".to_string(), "获取更多精美App")
         .accelerator("CmdOrCtrl+Shift+L");
     let first_menu = Menu::new()
         .add_native_item(MenuItem::Copy)

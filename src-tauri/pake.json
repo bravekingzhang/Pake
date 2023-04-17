@@ -1,8 +1,8 @@
 {
   "windows": [
     {
-      "url": "https://chat3.aichatos.com/",
-      "transparent": true,
+      "url": "https://weread.qq.com/",
+      "transparent": false,
       "fullscreen": false,
       "width": 1200,
       "height": 780,
